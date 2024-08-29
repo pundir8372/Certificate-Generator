@@ -1,0 +1,92 @@
+/* App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Remove horizontal scrollbar if content overflows */
+  overflow-y: auto;
+}
+
+.generate-certificate {
+  padding: 50px;
+  text-align: center;
+}
+
+.certificate-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.certificate-form div {
+  margin-bottom: 15px;
+}
+
+.certificate-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.certificate-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.certificate-preview {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.certificate-image {
+  margin: 20px 0;
+  padding: 50px;
+  border: 2px solid #ccc;
+  width: 600px;
+  height: 400px;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.certificate-image p {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+
+
+.underline-link {
+  position: relative;
+  text-decoration: none; 
+  color: #007bff; 
+  font-size: 16px;
+  display:inline-block; 
+}
+
+.underline-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; 
+  background-color: black; 
+  transform: scaleX(0); 
+  transform-origin: left; 
+  transition: transform 0.3s ease;
+}
+
+.underline-link:hover::after {
+  transform: scaleX(1); 
+  transform-origin: bottom; 
+}

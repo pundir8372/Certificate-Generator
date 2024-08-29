@@ -1,0 +1,99 @@
+/* Header.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffff;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+.logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #000;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  flex: 1; /* Allow the logo to take available space */
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav .underline-link {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav .underline-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(132, 132, 253);
+  transition: width 0.4s ease-in-out;
+}
+
+.nav .underline-link:hover::after {
+  width: 100%;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .nav .underline-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .nav .underline-link {
+    font-size: 0.9rem;
+  }
+}

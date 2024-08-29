@@ -1,0 +1,35 @@
+.download {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: royalblue;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin: 20px auto;
+  display: block;
+  font-size: 1em; /* Default font size */
+  max-width: 100%; /* Ensure button doesn't overflow */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.download:hover {
+  background-color: #0033cc; /* Darker royal blue on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .download {
+    padding: 8px 16px; /* Adjust padding for tablets */
+    font-size: 0.9em; /* Slightly smaller font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .download {
+    padding: 6px 12px; /* Further reduce padding for small screens */
+    font-size: 0.8em; /* Further reduce font size */
+  }
+}
