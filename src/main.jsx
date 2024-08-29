@@ -4,7 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { AppProvider } from './AppContext'; 
 import GenerateCertificate from './pages/GenerateCertificate.jsx'
-import MainLayout from './Layouts/MainLayout.jsx'
+import MainLayout from './Layouts/mainLayout.jsx'
 import PreviewCertificate from './pages/PreviewCertificate.jsx'
 import Home from './pages/Home.jsx'
 import DataStore from './components/DataStore.jsx'
