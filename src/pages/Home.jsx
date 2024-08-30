@@ -15,8 +15,8 @@ const Home = () => {
     <div className="home-container">
       <section className="hero">
         <div className="hero-content">
-          <h1>Welcome to the <span>Certificate Generator</span></h1>
-          <p>Were you a part of the event? Generate your participation certificate here.</p>
+          <h1>Thank You for Your Participation!</span></h1>
+          <p>Your efforts made this event special. Generate your participation certificate here as a token of our appreciation.</p>
           <button className="cta-button" onClick={handleGetStarted}>Get Started</button>
         </div>
       </section>
