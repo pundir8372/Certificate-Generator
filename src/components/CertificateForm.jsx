@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { db, ref, get, child } from '../firebase'; // Ensure this path is correct
+import { db, ref, get, child } from '../Firebase'; // Ensure this path is correct
 import { useNavigate } from 'react-router-dom';
 import './CertificateForm.css';
 
