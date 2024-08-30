@@ -7,20 +7,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.main{
-  display: flex;
+.main {
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: #1f293a;
 }
+
 .container {
-  width:90%;
-  max-width:250px;
-  height:auto;
-  position: relative;
-   /*width: 256px;
-  height: 256px;*/
+    width: 90%;
+    max-width: 250px;
+    height: auto;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,70 +50,20 @@
 .login-box {
     position: absolute;
     width: 300px;
+    padding: 20px; /* Added padding for inner spacing */
+   
+    border-radius: 10px; /* Rounded corners */
 }
 
 .login-box form {
     width: 100%;
-    padding: 0 50px;
 }
 
 h2 {
     font-size: 2em;
     color: #0ef;
     text-align: center;
-}
-
-
-
-
-@media (max-width: 768px) {
-  .login-box {
-      width: 90%; /* Adjust width for tablets */
-  }
-
-  h2 {
-      font-size: 1.3em; /* Adjust heading size */
-  }
-
-  .input-box input {
-      height: 40px; /* Reduce input height */
-      font-size: 0.85em; /* Reduce font size */
-  }
-
-  .input-box label {
-      font-size: 0.84em; /* Adjust label size */
-  }
-
-  .btnPreview {
-      font-size: 0.85em; /* Adjust button font size */
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-      width: 100%; /* Full width on small screens */
-  }
-
-  .login-box {
-      padding: 10px; /* Reduce padding */
-  }
-
-  h2 {
-      font-size: 1.2em; /* Adjust heading size */
-  }
-
-  .input-box input {
-      height: 35px; /* Further reduce input height */
-      font-size: 0.8em; /* Further reduce font size */
-  }
-
-  .input-box label {
-      font-size: 0.8em; /* Adjust label size */
-  }
-
-  .btnPreview {
-      font-size: 0.8em; /* Adjust button font size */
-  }
+    margin-bottom: 20px;
 }
 
 .input-box {
@@ -203,4 +152,57 @@ h2 {
 
 .Toastify__progress-bar {
     background: #1f293a;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .login-box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .input-box input {
+        height: 45px;
+        font-size: 0.9em;
+    }
+
+    .input-box label {
+        font-size: 0.9em;
+    }
+
+    .btnPreview {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .login-box {
+        padding: 10px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .input-box input {
+        height: 40px;
+        font-size: 0.85em;
+    }
+
+    .input-box label {
+        font-size: 0.85em;
+    }
+
+    .btnPreview {
+        font-size: 0.85em;
+    }
 }
