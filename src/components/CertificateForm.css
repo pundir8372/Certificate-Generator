@@ -16,13 +16,15 @@
 }
 
 .container {
-    width: 90%;
-    max-width: 250px;
+    width: 100%;
+    max-width: 300px; /* Adjusted for smaller screens */
+    padding: 20px;
     height: auto;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Stack items vertically */
 }
 
 .container span {
@@ -48,11 +50,11 @@
 }
 
 .login-box {
-    position: absolute;
-    width: 300px;
-    padding: 20px; /* Added padding for inner spacing */
-   
-    border-radius: 10px; /* Rounded corners */
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background: #2c4766;
+    border-radius: 10px;
 }
 
 .login-box form {
@@ -60,7 +62,7 @@
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #0ef;
     text-align: center;
     margin-bottom: 20px;
@@ -73,7 +75,7 @@ h2 {
 
 .input-box input {
     width: 100%;
-    height: 50px;
+    height: 45px;
     background: transparent;
     border: 2px solid #2c4766;
     outline: none;
@@ -94,7 +96,7 @@ h2 {
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    font-size: 1em;
+    font-size: 0.9em;
     color: #fff;
     pointer-events: none;
     transition: .5s ease;
@@ -120,17 +122,16 @@ h2 {
     font-size: 1em;
     color: #1f293a;
     font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btnPreview:hover {
+    background: #0bd3c9;
 }
 
 .preview-container {
     margin-top: 20px;
     text-align: center;
-}
-
-.preview-container .btn {
-    width: auto;
-    padding: 0 20px;
-    margin-top: 10px;
 }
 
 .Toastify__toast-container {
@@ -157,7 +158,7 @@ h2 {
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
     .login-box {
-        width: 90%;
+        width: 100%;
         padding: 15px;
     }
 
@@ -166,12 +167,12 @@ h2 {
     }
 
     .input-box input {
-        height: 45px;
+        height: 40px;
         font-size: 0.9em;
     }
 
     .input-box label {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     .btnPreview {
@@ -181,7 +182,8 @@ h2 {
 
 @media (max-width: 480px) {
     .container {
-        width: 100%;
+        max-width: 100%;
+        padding: 15px;
     }
 
     .login-box {
@@ -194,12 +196,12 @@ h2 {
     }
 
     .input-box input {
-        height: 40px;
+        height: 35px;
         font-size: 0.85em;
     }
 
     .input-box label {
-        font-size: 0.85em;
+        font-size: 0.75em;
     }
 
     .btnPreview {
