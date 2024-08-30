@@ -1,7 +1,7 @@
 // DataStore.js
 import { useEffect } from 'react';
 import { ref, set, get } from 'firebase/database';
-import { db } from '../firebase';
+import { db } from '../Firebase';
 
 const participants = {
   Member: [
