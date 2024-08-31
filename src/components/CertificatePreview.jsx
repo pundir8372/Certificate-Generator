@@ -10,7 +10,7 @@ const CertificatePreview = ({ formData }) => {
       <div className="certificate-details">
         <div className="name-role">
           <span>{formData.fullName}</span>
-          <span>({formData.role})</span>
+         
         </div>
         <div className="event-name">
           <span>{formData.event}</span>
