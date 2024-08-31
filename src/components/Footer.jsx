@@ -24,7 +24,7 @@ const FooterSection = () => {
     data.append('data[Message]', formData.message);
     
     try {
-      const response = await fetch('https://sheetdb.io/api/v1/qshm2dn0ezcy7', {
+      const response = await fetch('https://sheetdb.io/api/v1/p0fq34eb16wnp', {
         method: 'POST',
         body: data,
       });
