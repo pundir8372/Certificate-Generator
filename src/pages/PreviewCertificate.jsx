@@ -23,7 +23,7 @@ const PreviewCertificate = () => {
       doc.addImage(img, 'JPG', 0, 0, 210, 297); // Add the image with the correct dimensions for A4 paper
       
       doc.setFont("Helvetica", "bold");
-      doc.setFontSize(16);
+      doc.setFontSize(20);
   
       // Adjusting the text coordinates to fit within the designated areas on the certificate
   
