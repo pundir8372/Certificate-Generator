@@ -10,22 +10,34 @@ const PreviewCertificate = () => {
   const { formData } = location.state || {}; // Destructure the passed state
 
   const handleGenerateCertificate = () => {
-    const doc = new jsPDF();
+    const doc = new jsPDF({
+      orientation: 'portrait', // A4 paper is portrait by default
+      unit: 'mm',
+      format: 'a4',
+    });
+  
     const img = new Image();
-    img.src = "/Certificate2.jpg.jpg"; // Update this path
-
+    img.src = "/Certificate2.jpg.jpg"; // Update this path to the correct image path
+  
     img.onload = () => {
-      doc.addImage(img, 'JPG', 0, 0, 210, 297); // Ensure the format matches the image
-
-      doc.setFontSize(20);
+      doc.addImage(img, 'JPG', 0, 0, 210, 297); // Add the image with the correct dimensions for A4 paper
+      
       doc.setFont("Helvetica", "bold");
-      doc.text('Certificate of Participation', 20, 30);
       doc.setFontSize(16);
-      doc.text(`This is to certify that ${formData.fullName} has participated in the event.`, 20, 50);
-      doc.text(`Role/Position: ${formData.role}`, 20, 70);
-      doc.text(`Event: ${formData.event}`, 20, 90);
-
-      doc.save(`${formData.fullName}_Certificate.pdf`);
+  
+      // Adjusting the text coordinates to fit within the designated areas on the certificate
+  
+      // Full Name
+      const nameTextWidth = doc.getTextWidth(formData.fullName);
+      doc.text(formData.fullName, (doc.internal.pageSize.width - nameTextWidth) / 2, 155); // Adjust Y position to fit the name inside the space
+  
+      
+  
+      // Event
+      const eventTextWidth = doc.getTextWidth(formData.event);
+      doc.text(formData.event, (doc.internal.pageSize.width - eventTextWidth) / 2, 190); // Adjust Y position to fit the event inside the space
+  
+      doc.save(`Sahyog_Dehradun_Certificate.pdf`);
     };
   };
 
